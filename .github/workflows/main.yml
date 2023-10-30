@@ -1,4 +1,4 @@
-name: Load Test
+name: Load Testing
 #Control when the workflow will run
 on:
   push:
