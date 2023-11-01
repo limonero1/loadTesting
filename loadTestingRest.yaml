@@ -5,3 +5,5 @@ description: 'Prueba Azure'
 engineInstances: 1
 configurationFiles:
 - page.csv
+failureCriteria:
+- p90(response_time_ms) > 30
