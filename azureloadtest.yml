@@ -1,3 +1,10 @@
+# YAML file in the main branch
+schedules:
+- cron: '23 16 * * *'
+  displayName: Daily midnight build
+  branches:
+    include:
+    - main
 stages:
 - stage: Build
   displayName: Build stage
