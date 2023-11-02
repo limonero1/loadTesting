@@ -6,5 +6,5 @@ engineInstances: 1
 configurationFiles:
 - page.csv
 failureCriteria:
-- api rest: p90(response_time_ms) > 30
+- loadtestrest: p90(response_time_ms) > 30
 - error: avg(requests_per_sec) > 18
