@@ -7,3 +7,4 @@ configurationFiles:
 - page.csv
 failureCriteria:
 - api rest: p90(response_time_ms) > 30
+- error: avg(requests_per_sec) > 18
