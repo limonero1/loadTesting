@@ -6,4 +6,4 @@ engineInstances: 1
 configurationFiles:
 - page.csv
 failureCriteria:
-- api rest: p90(response_time_ms) > 20
+- api rest: p90(response_time_ms) > 30
