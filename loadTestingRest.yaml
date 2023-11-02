@@ -7,4 +7,7 @@ configurationFiles:
 - ruta.csv
 failureCriteria:
 - loadtestrest: p90(response_time_ms) > 40
-- error: avg(requests_per_sec) > 40
+- error: percentage(error) > 30
+autoStop:
+  errorPercentage: 90
+  timeWindow: 60
