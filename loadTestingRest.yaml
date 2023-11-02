@@ -1,10 +1,10 @@
 version: v0.1
 testName: loadtestingrest
-testPlan: loadTestingRest.jmx
+testPlan: loginrest.jmx
 description: 'Prueba Azure'
 engineInstances: 1
 configurationFiles:
-- page.csv
+- ruta.csv
 failureCriteria:
-- loadtestrest: p90(response_time_ms) > 30
-- error: avg(requests_per_sec) > 18
+- loadtestrest: p90(response_time_ms) > 40
+- error: avg(requests_per_sec) > 40
