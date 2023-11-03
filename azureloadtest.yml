@@ -27,7 +27,7 @@ stages:
               inputs:
                 azureSubscription: loadtestingrest
                 loadTestConfigFile: 'loadTestingRest.yaml'
-                loadTestResource: MiguelGarcia
+                loadTestResource: MiguelGarciadd
                 resourceGroup: MiguelGarcia
             - publish: $(System.DefaultWorkingDirectory)/loadTest
               artifact: loadTestResults
