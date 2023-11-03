@@ -6,7 +6,7 @@ engineInstances: 1
 configurationFiles:
 - ruta.csv
 failureCriteria:
-- loadtestrest: p90(response_time_ms) > 40
+- loadtestrest: p90(response_time_ms) > 30
 - error: percentage(error) > 20
 autoStop:
   errorPercentage: 30
