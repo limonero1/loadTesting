@@ -10,4 +10,4 @@ failureCriteria:
 - error: percentage(error) > 20
 autoStop:
   errorPercentage: 30
-  timeWindow: 60
+  timeWindow: 12
