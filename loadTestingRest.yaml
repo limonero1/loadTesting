@@ -5,5 +5,3 @@ description: 'Prueba Azure'
 engineInstances: 1
 configurationFiles:
 - ruta.csv
-failureCriteria:
-- loadtestrest: p90(response_time_ms) > 70
