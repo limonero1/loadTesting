@@ -8,3 +8,6 @@ configurationFiles:
 failureCriteria:
  - loadtestrest: p90(response_time_ms) > 70
  - error: percentage(error) > 20
+ autoStop:
+  errorPercentage: 30
+  timeWindow: 10
