@@ -26,7 +26,7 @@ stages:
               displayName: Load Testing
               inputs:
                 azureSubscription: loadtestingrest
-                loadTestConfigFile: 'loadTestingRest.yaml'
+                loadTestConfigFile: 'loadtest.yaml'
                 loadTestResource: MiguelGarcia
                 resourceGroup: MiguelGarcia
             - publish: $(System.DefaultWorkingDirectory)/loadTest
