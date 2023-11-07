@@ -8,7 +8,7 @@ env:
   LOAD_TEST_RESOURCE: "MiguelGarcia"
   LOAD_TEST_RESOURCE_GROUP: "MiguelGarcia"
   LOAD_TEST_LOCATION: "East US"
-  AZURE_WEBAPP_NAME: "loadtesting"
+  AZURE_WEBAPP_NAME: "demoazure"
   AZURE_WEBAPP_PACKAGE_PATH: '.'
   NODE_VERSION: '14.5.1'
   LOCATION: "East US"
