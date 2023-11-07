@@ -8,7 +8,7 @@ env:
   LOAD_TEST_RESOURCE: "MiguelGarcia"
   LOAD_TEST_RESOURCE_GROUP: "MiguelGarcia"
   LOAD_TEST_LOCATION: "East US"
-  AZURE_WEBAPP_NAME: "loadtesting"
+  AZURE_WEBAPP_NAME: "demoazure"
   AZURE_WEBAPP_PACKAGE_PATH: '.'
   NODE_VERSION: '14.5.1'
   LOCATION: "East US"
@@ -36,13 +36,12 @@ jobs:
  #           az account show
  #           az group list
  #           pwd   
-   
+ 
     - name: 'Login via Azure CLI'
       uses: azure/login@v1
       continue-on-error: false
       with:
-        creds: '{"clientId": "abec917b-9015-4f61-816c-de68ad53cff8", "clientSecret": "JHS8Q~zFQ9zq7DvSy6pL87b_bF.tXmah0Jkz7b8G", "subscriptionId": "dbb44df0-8a01-4b7a-84c7-a15173ede004", "tenantId": "0e2eb8d8-b8c9-4ee3-97e0-07f405398b85", "activeDirectoryEndpointUrl": "https://login.microsoftonline.com", "resourceManagerEndpointUrl": "https://management.azure.com/", "activeDirectoryGraphResourceId": "https://graph.windows.net/", "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/", "galleryEndpointUrl": "https://gallery.azure.com/", "managementEndpointUrl": "https://management.core.windows.net/"}'
-
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: 'Azure Load Testing'
       uses: azure/load-testing@v1
       with:

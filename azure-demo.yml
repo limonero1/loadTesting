@@ -1,0 +1,26 @@
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:
+    - deployment: deploy
+      displayName: Load Testing
+      pool:
+        vmImage: ubuntu-latest
+      environment: loadtesting
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - checkout: self
+              persistCredentials: true
+            #  enabled:
+              displayName: Git clone source code
+            - task: AzureLoadTest@1
+              displayName: Load Testing
+              inputs:
+                azureSubscription: demoazure
+                loadTestConfigFile: 'loadTestingRest.yaml'
+                loadTestResource: MiguelGarcia
+                resourceGroup: MiguelGarcia
+            - publish: $(System.DefaultWorkingDirectory)/loadTest
+              artifact: loadTestResults
