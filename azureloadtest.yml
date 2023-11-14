@@ -36,5 +36,5 @@ stages:
             - task: publishhtmlreport@1
               inputs:
                 htmlType: 'genericHTML'
-                htmlPath: '$(Build.SourcesDirectory)/Sample.html'
-                JmeterReportsPath: '$(Build.SourcesDirectory)/LoadReports'
+                htmlPath: '$(System.DefaultWorkingDirectory)/Sample.html'
+                JmeterReportsPath: '$(System.DefaultWorkingDirectory)/loadTest'
