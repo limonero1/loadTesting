@@ -31,3 +31,7 @@ stages:
                 resourceGroup: MiguelGarcia
             - publish: $(System.DefaultWorkingDirectory)/loadTest
               artifact: loadTestResults
+
+            - task: CmdLine@2
+              inputs:
+                script: 'JMeter -g loadTestResults/results.zip -o loadTestResullts/report'
