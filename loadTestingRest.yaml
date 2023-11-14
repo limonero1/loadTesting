@@ -1,7 +1,7 @@
 version: v0.1
 testName: loadtestingrest
-testPlan: loginrest.jmx
+testPlan: loadTestingRest.jmx
 description: 'Prueba Azure'
 engineInstances: 1
 configurationFiles:
-- ruta.csv
+- page.csv

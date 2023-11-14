@@ -31,8 +31,3 @@ stages:
                 resourceGroup: MiguelGarcia
             - publish: $(System.DefaultWorkingDirectory)/loadTest
               artifact: loadTestResults
-
-            - task: publishhtmlreport@1
-              inputs:
-              htmlType: 'Jmeter'
-              JmeterReportsPath: '$(System.DefaultWorkingDirectory)/loadTest'
