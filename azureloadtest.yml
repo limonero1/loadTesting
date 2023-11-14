@@ -35,4 +35,4 @@ stages:
             - task: CmdLine@2
               displayName: ObtieneReporteHTML
               inputs:
-                script: 'JMeter -g loadTestResults/results.zip -o loadTestResullts/report'
+                script: 'jmeter -g loadTestResults/results.zip -o loadTestResullts/report'
