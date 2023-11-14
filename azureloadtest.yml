@@ -32,7 +32,7 @@ stages:
             - publish: $(System.DefaultWorkingDirectory)/loadTest
               artifact: loadTestResults
 
-            - task: CmdLine@2
-              displayName: ObtieneReporteHTML
+            - task: publishhtmlreport@1
               inputs:
-                script: 'jmeter -g loadTestResults/results.zip -o loadTestResullts/report'
+              htmlType: 'Jmeter'
+              JmeterReportsPath: '$(System.DefaultWorkingDirectory)/loadTest'
