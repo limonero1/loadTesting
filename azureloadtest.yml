@@ -1,4 +1,5 @@
 # YAML file in the main branch
+
 schedules:
 - cron: '23 16 * * *'
   displayName: Daily midnight build
@@ -30,4 +31,14 @@ stages:
                 loadTestResource: MiguelGarcia
                 resourceGroup: MiguelGarcia
             - publish: $(System.DefaultWorkingDirectory)/loadTest
+<<<<<<< HEAD
               artifact: loadTestResults
+=======
+              artifact: loadTestResults
+
+            - task: publishhtmlreport@1
+              inputs:
+                htmlType: 'genericHTML'
+                htmlPath: '$(System.DefaultWorkingDirectory)/Sample.html'
+                JmeterReportsPath: '$(System.DefaultWorkingDirectory)/loadTest'
+>>>>>>> 8d532d4cdd40717187bc04f187c7bc4a86e35590
