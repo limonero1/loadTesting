@@ -1,4 +1,5 @@
 # YAML file in the main branch
+
 schedules:
 - cron: '23 16 * * *'
   displayName: Daily midnight build
@@ -34,5 +35,6 @@ stages:
 
             - task: publishhtmlreport@1
               inputs:
-              htmlType: 'Jmeter'
-              JmeterReportsPath: '$(System.DefaultWorkingDirectory)/loadTest'
+                htmlType: 'genericHTML'
+                htmlPath: '$(Build.SourcesDirectory)/Sample.html'
+                JmeterReportsPath: '$(Build.SourcesDirectory)/LoadReports'
