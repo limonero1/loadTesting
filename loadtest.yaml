@@ -1,6 +1,6 @@
 version: v0.1
 testName: loadtestingrest
-testPlan: loginrest.jmx
+testPlan: loginrestuno.jmx
 description: 'Prueba Azure'
 engineInstances: 1
 configurationFiles:
