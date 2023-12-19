@@ -23,11 +23,7 @@ stages:
               persistCredentials: true
             #  enabled:
               displayName: Git clone source code
-<<<<<<< HEAD
-            - task: AzureLoadTest1@1  
-=======
-            - task: AzureLoadTest@1s
->>>>>>> d9fb9d5c684e2395eae0aeb56d3a395be63f3f2b
+            - task: AzureLoadTest@1
               displayName: Load Testing
               inputs:
                 azureSubscription: loadtestingrest
